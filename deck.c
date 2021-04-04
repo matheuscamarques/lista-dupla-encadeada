@@ -29,7 +29,7 @@ Deck* insertFront (Deck *d, Point p, char field[][SIZE]) {
    /*Terminar ...*/
    Deck *novo = (Deck*)malloc(sizeof(Deck));
     novo->p = p;
-    novo->proximo = no;
+    novo->proximo = d;
     novo->anterior = NULL;
   
     if(d != NULL){
