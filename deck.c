@@ -47,7 +47,7 @@ Deck* insertRear (Deck *d, Point p, char field[][SIZE]) {
   while(aux->next != NULL){
       aux = aux->next;  
   }
-  Node *novo = (Deck*)malloc(sizeof(Deck));
+  Deck *novo = (Deck*)malloc(sizeof(Deck));
   novo->next = NULL;
   novo->prev = aux;
   novo->p = p;
@@ -62,7 +62,7 @@ Deck* deleteFront (Deck *d, char field[][SIZE]) {
    /*Terminar ...*/
    //field[x][y] = ' '; /*Ponto eliminado agora é marcado como vazio!*/
    /*Terminar ...*/
-  Node *aux = d->next;
+  Deck *aux = d->next;
   field[d->p.x][d->p.y] = ' ';
   free(d);
   aux->prev = NULL;
@@ -83,7 +83,7 @@ Deck* deleteRear (Deck *d, char field[][SIZE]) {
   aux->next->prev = NULL;
   free(aux);
   
-  return no;
+  return d;
 }
 
 
