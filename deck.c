@@ -63,7 +63,7 @@ Deck* deleteFront (Deck *d, char field[][SIZE]) {
    //field[x][y] = ' '; /*Ponto eliminado agora é marcado como vazio!*/
    /*Terminar ...*/
   Node *aux = d->next;
-  field[d->p->x][d->p->y] = ' ';
+  field[d->p.x][d->p.y] = ' ';
   free(d);
   aux->prev = NULL;
   return aux;
@@ -79,7 +79,7 @@ Deck* deleteRear (Deck *d, char field[][SIZE]) {
     aux = aux->next;
   }
   
-  field[aux->p->x][aux->p->y] = ' ';
+  field[aux->p.x][aux->p.y] = ' ';
   aux->next->prev = NULL;
   free(aux);
   
