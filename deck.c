@@ -43,7 +43,7 @@ Deck* insertFront (Deck *d, Point p, char field[][SIZE]) {
 Deck* insertRear (Deck *d, Point p, char field[][SIZE]) {
    /*Terminar ...*/
   field[p.x][p.y] = '*';  /*Ponto inserido faz parte do corpo da Snake!*/
-  Node *aux = d;
+  Deck *aux = d;
   while(aux->next != NULL){
       aux = aux->next;  
   }
